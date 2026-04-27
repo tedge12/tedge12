@@ -1,147 +1,164 @@
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">                                                                   
-    <defs>                                                                                                                                                  
-      <style>                                                                                                                                               
-        .beacon  { animation: bp 2s ease-in-out infinite; }                                                                                                 
-        .beacon2 { animation: bp 2s ease-in-out infinite; animation-delay: 1s; }                                                                          
-        .beacon3 { animation: bp 2s ease-in-out infinite; animation-delay: .5s; }                                                                           
-        .cursor  { animation: cb .8s step-end infinite; animation-delay: 2.5s; opacity: 0; }                                                              
-        @keyframes bp { 0%,100%{opacity:1} 50%{opacity:.06} }                                                                                               
-        @keyframes cb { 0%,100%{opacity:1} 50%{opacity:0}   }                                                                                               
-      </style>                                                                                                                                              
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">                                                               
-        <stop offset="0%"   stop-color="#04020a"/>                                                                                                          
-        <stop offset="55%"  stop-color="#1a0e08"/>                                                                                                          
-        <stop offset="100%" stop-color="#4a1c00"/>                                                                                                          
-      </linearGradient>                                                                                                                                     
-      <linearGradient id="smog" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">                                                              
-        <stop offset="0%"   stop-color="#ff5500" stop-opacity="0"/>                                                                                         
-        <stop offset="100%" stop-color="#ff6600" stop-opacity=".22"/>
-      </linearGradient>                                                                                                                                     
-      <filter id="neon" x="-30%" y="-80%" width="160%" height="260%">                                                                                       
-        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b1"/>
-        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b2"/>                                                                                   
-        <feMerge>                                                                                                                                           
-          <feMergeNode in="b2"/>                                                                                                                            
-          <feMergeNode in="b1"/>                                                                                                                            
-          <feMergeNode in="SourceGraphic"/>                                                                                                               
-        </feMerge>
-      </filter>                                                                                                                                             
-      <filter id="sg" x="-150%" y="-150%" width="400%" height="400%">
-        <feGaussianBlur stdDeviation="2" result="b"/>                                                                                                       
-        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>                                                                           
-      </filter>
-      <pattern id="wA" x="2" y="2" width="14" height="12" patternUnits="userSpaceOnUse">                                                                    
-        <rect x="2" y="2" width="8" height="6" fill="#ffaa22"/>                                                                                             
-      </pattern>                                                                                                                                            
-      <pattern id="wR" x="2" y="2" width="14" height="12" patternUnits="userSpaceOnUse">                                                                    
-        <rect x="2" y="2" width="8" height="6" fill="#ff5511"/>                                                                                             
-      </pattern>                                                                                                                                          
-      <pattern id="wB" x="2" y="2" width="14" height="12" patternUnits="userSpaceOnUse">                                                                    
-        <rect x="2" y="2" width="8" height="6" fill="#4499ff"/>                                                                                             
-      </pattern>                                                                                                                                            
-      <clipPath id="typer">                                                                                                                                 
-        <rect x="0" y="105" width="0" height="65">                                                                                                          
-          <animate attributeName="width" from="0" to="900" dur="2s" begin="0.8s" fill="freeze"/>                                                            
-        </rect>                                                                                                                                             
-      </clipPath>                                                                                                                                           
-    </defs>                                                                                                                                                 
-    <rect width="900" height="300" fill="url(#sky)"/>                                                                                                     
-    <g fill="#fff" opacity=".35">                                                                                                                           
-      <circle cx="35"  cy="12" r="0.8"/><circle cx="88"  cy="28" r="1.0"/>
-      <circle cx="145" cy="8"  r="0.7"/><circle cx="220" cy="35" r="0.9"/>                                                                                  
-      <circle cx="310" cy="18" r="0.8"/><circle cx="400" cy="42" r="0.7"/>                                                                                  
-      <circle cx="480" cy="15" r="1.0"/><circle cx="565" cy="38" r="0.8"/>                                                                                  
-      <circle cx="645" cy="10" r="0.9"/><circle cx="730" cy="30" r="0.7"/>                                                                                  
-      <circle cx="810" cy="22" r="0.8"/><circle cx="870" cy="45" r="1.0"/>                                                                                
-    </g>                                                                                                                                                    
-    <g fill="#160b1a">                                                                                                                                    
-      <rect x="0"   y="192" width="62"  height="66"/>
-      <rect x="65"  y="172" width="55"  height="86"/>
-      <rect x="123" y="185" width="48"  height="73"/>                                                                                                       
-      <rect x="174" y="165" width="62"  height="93"/>
-      <rect x="239" y="180" width="50"  height="78"/>                                                                                                       
-      <rect x="292" y="193" width="44"  height="65"/>                                                                                                     
-      <polygon points="308,258 592,258 488,135 412,135"/>
-      <rect x="428" y="124" width="44"  height="12"/>
-      <rect x="436" y="113" width="28"  height="12"/>
-      <rect x="444" y="105" width="12"  height="10"/>
-      <rect x="592" y="193" width="44"  height="65"/>
-      <rect x="639" y="180" width="50"  height="78"/>
-      <rect x="692" y="165" width="62"  height="93"/>
-      <rect x="757" y="185" width="48"  height="73"/>
-      <rect x="808" y="172" width="55"  height="86"/>
-      <rect x="866" y="192" width="34"  height="66"/>                                                                                                       
-    </g>
-    <g fill="#080510">                                                                                                                                      
-      <rect x="0"   y="165" width="50"  height="93"/>                                                                                                       
-      <rect x="53"  y="142" width="68"  height="116"/>
-      <rect x="124" y="155" width="55"  height="103"/>                                                                                                      
-      <rect x="182" y="122" width="70"  height="136"/>                                                                                                    
-      <rect x="255" y="166" width="48"  height="92"/>                                                                                                       
-      <rect x="306" y="202" width="40"  height="56"/>                                                                                                     
-      <rect x="554" y="202" width="40"  height="56"/>                                                                                                       
-      <rect x="597" y="166" width="48"  height="92"/>                                                                                                     
-      <rect x="648" y="122" width="70"  height="136"/>
-      <rect x="721" y="155" width="55"  height="103"/>                                                                                                      
-      <rect x="779" y="142" width="68"  height="116"/>
-      <rect x="850" y="165" width="50"  height="93"/>                                                                                                       
-    </g>                                                                                                                                                  
-    <rect x="53"  y="142" width="68"  height="116" fill="url(#wA)" opacity=".58"/>                                                                          
-    <rect x="182" y="122" width="70"  height="136" fill="url(#wA)" opacity=".62"/>                                                                          
-    <rect x="124" y="155" width="55"  height="103" fill="url(#wR)" opacity=".42"/>                                                                          
-    <rect x="648" y="122" width="70"  height="136" fill="url(#wA)" opacity=".62"/>                                                                          
-    <rect x="721" y="155" width="55"  height="103" fill="url(#wR)" opacity=".42"/>                                                                          
-    <rect x="779" y="142" width="68"  height="116" fill="url(#wA)" opacity=".58"/>                                                                          
-    <rect x="255" y="166" width="48"  height="92"  fill="url(#wB)" opacity=".22"/>                                                                        
-    <rect x="597" y="166" width="48"  height="92"  fill="url(#wB)" opacity=".22"/>                                                                          
-    <rect x="215" y="104" width="2"   height="20"  fill="#2a1010"/>                                                                                       
-    <circle cx="216" cy="103" r="2.5" fill="#ff3300" filter="url(#sg)" class="beacon"/>                                                                     
-    <rect x="683" y="104" width="2"   height="20"  fill="#2a1010"/>                                                                                         
-    <circle cx="684" cy="103" r="2.5" fill="#ff3300" filter="url(#sg)" class="beacon2"/>                                                                    
-    <rect x="87"  y="125" width="2"   height="18"  fill="#1a0e0e"/>                                                                                         
-    <circle cx="88"  cy="124" r="2"   fill="#ff5500" filter="url(#sg)" class="beacon3"/>                                                                    
-    <rect x="813" y="125" width="2"   height="18"  fill="#1a0e0e"/>                                                                                         
-    <circle cx="814" cy="124" r="2"   fill="#ff5500" filter="url(#sg)" class="beacon"/>                                                                     
-    <rect x="58"  y="183" width="32"  height="4"   fill="#ff4400" filter="url(#sg)" opacity=".9"/>                                                          
-    <rect x="58"  y="190" width="22"  height="3"   fill="#ffbb00" filter="url(#sg)" opacity=".85"/>                                                         
-    <rect x="812" y="183" width="32"  height="4"   fill="#ff4400" filter="url(#sg)" opacity=".9"/>                                                          
-    <rect x="812" y="190" width="22"  height="3"   fill="#ffbb00" filter="url(#sg)" opacity=".85"/>                                                         
-    <rect x="187" y="156" width="28"  height="3"   fill="#ff0055" filter="url(#sg)" opacity=".88"/>                                                         
-    <rect x="685" y="156" width="28"  height="3"   fill="#ff0055" filter="url(#sg)" opacity=".88"/>                                                         
-    <rect x="128" y="175" width="20"  height="3"   fill="#ff8800" filter="url(#sg)" opacity=".75"/>                                                         
-    <rect x="752" y="175" width="20"  height="3"   fill="#ff8800" filter="url(#sg)" opacity=".75"/>                                                         
-    <rect x="0" y="188" width="900" height="70" fill="url(#smog)"/>                                                                                         
-    <line x1="0" y1="258" x2="900" y2="258" stroke="#ff8800" stroke-width="1.5" opacity=".5" filter="url(#sg)"/>                                            
-    <line x1="0" y1="261" x2="900" y2="261" stroke="#cc3300" stroke-width="0.5" opacity=".35"/>                                                             
-    <g>                                                                                                                                                     
-      <circle r="1.5" fill="#ffcc44" filter="url(#sg)">                                                                                                     
-        <animate attributeName="cx" from="-10" to="910" dur="18s" repeatCount="indefinite"/>                                                                
-        <animate attributeName="cy" values="72;68;76;72" dur="18s" repeatCount="indefinite"/>                                                               
-      </circle>                                                                                                                                             
-      <circle r="1" fill="#ff4422" opacity=".8">                                                                                                            
-        <animate attributeName="cx" from="-16" to="904" dur="18s" repeatCount="indefinite"/>                                                                
-        <animate attributeName="cy" values="72;68;76;72" dur="18s" repeatCount="indefinite"/>
-      </circle>                                                                                                                                             
-    </g>                                                                                                                                                  
-    <g>                                                                                                                                                     
-      <circle r="1.5" fill="#aaccff" filter="url(#sg)">                                                                                                   
-        <animate attributeName="cx" from="910" to="-10" dur="14s" begin="9s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="88;92;86;88" dur="14s" begin="9s" repeatCount="indefinite"/>                                                    
-      </circle>
-      <circle r="1" fill="#ff4422" opacity=".7">                                                                                                            
-        <animate attributeName="cx" from="916" to="-4" dur="14s" begin="9s" repeatCount="indefinite"/>                                                    
-        <animate attributeName="cy" values="88;92;86;88" dur="14s" begin="9s" repeatCount="indefinite"/>                                                    
-      </circle>                                                                                                                                           
-    </g>                                                                                                                                                    
-    <g clip-path="url(#typer)">                                                                                                                           
-      <text x="450" y="152"                                                                                                                                 
-            text-anchor="middle"
-            font-family="'Courier New', Courier, monospace"                                                                                                 
-            font-size="38"                                                                                                                                
-            letter-spacing="5"
-            fill="#ffffff"
-            filter="url(#neon)">HELLO, WELCOME</text>                                                                                                       
-    </g>
-    <rect x="643" y="122" width="3" height="33" fill="#ffffff" filter="url(#neon)" class="cursor"/>                                                         
-  </svg>                                                    
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+  <defs>
+    <style>
+      .cursor { animation: cb .8s step-end infinite; animation-delay: 2.5s; opacity: 0; }
+      @keyframes cb { 0%,100%{opacity:1} 50%{opacity:0} }
+    </style>
+
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#02030b"/>
+      <stop offset="100%" stop-color="#060d1c"/>
+    </linearGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#050f20" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050f20" stop-opacity=".65"/>
+    </linearGradient>
+
+    <filter id="flameF" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="neon" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sg" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="faceF" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <pattern id="wG" x="0" y="0" width="36" height="28" patternUnits="userSpaceOnUse">
+      <rect x="2"  y="2"  width="5" height="3" fill="#506888" opacity=".62"/>
+      <rect x="11" y="2"  width="5" height="3" fill="#131c28" opacity=".4"/>
+      <rect x="20" y="2"  width="5" height="3" fill="#607898" opacity=".68"/>
+      <rect x="29" y="2"  width="5" height="3" fill="#48607e" opacity=".55"/>
+      <rect x="2"  y="9"  width="5" height="3" fill="#131c28" opacity=".3"/>
+      <rect x="11" y="9"  width="5" height="3" fill="#587090" opacity=".58"/>
+      <rect x="20" y="9"  width="5" height="3" fill="#b09050" opacity=".42"/>
+      <rect x="29" y="9"  width="5" height="3" fill="#131c28" opacity=".3"/>
+      <rect x="2"  y="16" width="5" height="3" fill="#6080a8" opacity=".68"/>
+      <rect x="11" y="16" width="5" height="3" fill="#131c28" opacity=".22"/>
+      <rect x="20" y="16" width="5" height="3" fill="#506888" opacity=".58"/>
+      <rect x="29" y="16" width="5" height="3" fill="#6888b0" opacity=".72"/>
+      <rect x="2"  y="23" width="5" height="3" fill="#486278" opacity=".52"/>
+      <rect x="11" y="23" width="5" height="3" fill="#7888b8" opacity=".58"/>
+      <rect x="20" y="23" width="5" height="3" fill="#131c28" opacity=".2"/>
+      <rect x="29" y="23" width="5" height="3" fill="#506888" opacity=".62"/>
+    </pattern>
+
+    <clipPath id="typer">
+      <rect x="0" y="105" width="0" height="65">
+        <animate attributeName="width" from="0" to="900" dur="2s" begin="0.8s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="900" height="300" fill="url(#sky)"/>
+
+  <!-- Background distant buildings -->
+  <rect x="280" y="50"  width="115" height="208" fill="#040710"/>
+  <rect x="505" y="65"  width="115" height="193" fill="#040810"/>
+  <rect x="280" y="50"  width="115" height="208" fill="url(#wG)" opacity=".16"/>
+  <rect x="505" y="65"  width="115" height="193" fill="url(#wG)" opacity=".14"/>
+
+  <!-- Left mega-building -->
+  <rect x="0"   y="0"   width="272" height="258" fill="#07090e"/>
+  <rect x="0"   y="0"   width="272" height="258" fill="url(#wG)" opacity=".52"/>
+  <rect x="90"  y="0"   width="3"   height="258" fill="#030507" opacity=".8"/>
+  <rect x="180" y="0"   width="3"   height="258" fill="#030507" opacity=".8"/>
+
+  <!-- Face billboard on left building -->
+  <g filter="url(#faceF)">
+    <rect x="0" y="0" width="272" height="258" fill="#001428" opacity=".4"/>
+    <ellipse cx="134" cy="128" rx="92" ry="120" fill="none" stroke="#1e4a8a" stroke-width="1.5" opacity=".45"/>
+    <ellipse cx="92"  cy="82"  rx="30" ry="17"  fill="#08182e" opacity=".75"/>
+    <ellipse cx="92"  cy="82"  rx="30" ry="17"  fill="none"    stroke="#2d60b0" stroke-width="1.5" opacity=".85"/>
+    <ellipse cx="92"  cy="82"  rx="13" ry="13"  fill="#162e58" opacity=".9"/>
+    <ellipse cx="92"  cy="82"  rx="6"  ry="6"   fill="#2a58aa" opacity=".85"/>
+    <circle  cx="97"  cy="78"  r="2"             fill="#4a80d0" opacity=".7"/>
+    <ellipse cx="178" cy="82"  rx="30" ry="17"  fill="#08182e" opacity=".75"/>
+    <ellipse cx="178" cy="82"  rx="30" ry="17"  fill="none"    stroke="#2d60b0" stroke-width="1.5" opacity=".85"/>
+    <ellipse cx="178" cy="82"  rx="13" ry="13"  fill="#162e58" opacity=".9"/>
+    <ellipse cx="178" cy="82"  rx="6"  ry="6"   fill="#2a58aa" opacity=".85"/>
+    <circle  cx="183" cy="78"  r="2"             fill="#4a80d0" opacity=".7"/>
+    <path d="M 122,100 L 114,148 Q 134,155 154,148 L 146,100" fill="none" stroke="#1a407a" stroke-width="1" opacity=".35"/>
+    <path d="M 76,182 Q 108,172 134,178 Q 160,172 192,182" stroke="#2450a0" stroke-width="1.8" fill="none" opacity=".75"/>
+    <path d="M 76,182 Q 134,202 192,182"                    stroke="#1a3a7a" stroke-width="1.5" fill="none" opacity=".55"/>
+    <path d="M 76,182 Q 62,222 134,238 Q 206,222 192,182"  fill="none"    stroke="#142e60" stroke-width="1" opacity=".3"/>
+  </g>
+
+  <!-- Right mega-building -->
+  <rect x="628" y="0"   width="272" height="258" fill="#060810"/>
+  <rect x="628" y="0"   width="272" height="258" fill="url(#wG)" opacity=".54"/>
+  <rect x="718" y="0"   width="3"   height="258" fill="#020406" opacity=".8"/>
+  <rect x="808" y="0"   width="3"   height="258" fill="#020406" opacity=".8"/>
+
+  <!-- Mid-frame inward buildings -->
+  <rect x="272" y="72"  width="85"  height="186" fill="#050810"/>
+  <rect x="272" y="72"  width="85"  height="186" fill="url(#wG)" opacity=".32"/>
+  <rect x="543" y="88"  width="85"  height="170" fill="#040710"/>
+  <rect x="543" y="88"  width="85"  height="170" fill="url(#wG)" opacity=".30"/>
+
+  <!-- Torch structure -->
+  <rect x="437" y="218" width="26"  height="40"  fill="#03050c"/>
+  <rect x="430" y="213" width="40"  height="7"   fill="#04070e"/>
+  <rect x="444" y="98"  width="12"  height="118" fill="#03050c"/>
+  <rect x="426" y="143" width="48"  height="5"   fill="#03050c"/>
+  <rect x="432" y="172" width="36"  height="4"   fill="#03050c"/>
+  <ellipse cx="450" cy="100" rx="9" ry="3.5"     fill="#150800"/>
+  <!-- Outer flame -->
+  <ellipse cx="450" cy="88" rx="9" ry="15" fill="#ff7700" opacity=".92" filter="url(#flameF)">
+    <animate attributeName="ry" values="15;19;12;17;14;15" dur=".55s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="88;84;92;86;90;88" dur=".55s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="9;7;10;8;9"        dur=".55s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Inner flame -->
+  <ellipse cx="450" cy="84" rx="5" ry="9"  fill="#ffdd00" opacity=".95" filter="url(#flameF)">
+    <animate attributeName="ry" values="9;12;7;10;8;9"     dur=".38s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="84;80;88;82;86;84" dur=".38s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="450" cy="86" rx="2" ry="4"  fill="#ffffff" opacity=".85"/>
+
+  <!-- Depth haze -->
+  <rect x="0" y="148" width="900" height="152" fill="url(#haze)"/>
+
+  <!-- Street level -->
+  <line x1="0" y1="258" x2="900" y2="258" stroke="#1a3050" stroke-width="1" opacity=".6"/>
+  <rect x="0" y="252" width="900" height="6" fill="#0a1830" opacity=".5"/>
+
+  <!-- Spinner -->
+  <polygon points="232,228 232,248 400,244 400,232" fill="#3366bb" opacity=".10"/>
+  <ellipse cx="162" cy="254" rx="66" ry="3"  fill="#000"    opacity=".45"/>
+  <ellipse cx="162" cy="240" rx="64" ry="11" fill="#1c0404"/>
+  <ellipse cx="162" cy="237" rx="60" ry="8"  fill="#280606"/>
+  <ellipse cx="162" cy="232" rx="55" ry="4"  fill="#300808" opacity=".7"/>
+  <ellipse cx="150" cy="229" rx="24" ry="5"  fill="#080e18" opacity=".9"/>
+  <circle  cx="100" cy="239" r="4"           fill="#cc1e00" filter="url(#sg)"/>
+  <circle  cx="100" cy="239" r="2"           fill="#ff3300"/>
+  <circle  cx="222" cy="239" r="2.5"         fill="#aa1800" filter="url(#sg)" opacity=".7"/>
+  <circle  cx="230" cy="238" r="5"           fill="#4477cc" filter="url(#sg)"/>
+  <circle  cx="230" cy="238" r="2.5"         fill="#88aaff"/>
+  <ellipse cx="162" cy="249" rx="42" ry="3"  fill="#153050" opacity=".28" filter="url(#sg)"/>
+
+  <!-- Typewriter text -->
+  <g clip-path="url(#typer)">
+    <text x="450" y="152"
+          text-anchor="middle"
+          font-family="'Courier New', Courier, monospace"
+          font-size="38"
+          letter-spacing="5"
+          fill="#ffffff"
+          filter="url(#neon)">HELLO, WELCOME</text>
+  </g>
+
+  <!-- Cursor -->
+  <rect x="643" y="122" width="3" height="33" fill="#ffffff" filter="url(#neon)" class="cursor"/>
+</svg>
+                                             
 
