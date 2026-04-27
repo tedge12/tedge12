@@ -1,3 +1,3 @@
- <p align="center">
-    <img src="./banner.svg" alt="Hello Welcome Banner" />
-  </p>
+  <p align="center">                                                                                                                                        
+    <img src="./tedge12_banner.svg" alt="Banner" />                                                                                                         
+  </p>     
